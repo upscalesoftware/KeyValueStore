@@ -121,7 +121,7 @@ class ArrayStorage implements Storage
             throw new NotFoundException();
         }
 
-        unset($this->data[$storageName][serialize($key)]);
+        return $this->data[$storageName][serialize($key)];
     }
 
     /**
